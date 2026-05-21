@@ -1,14 +1,17 @@
 :root {
-  --ink: #161818;
-  --muted: #66706b;
-  --line: #dfe5df;
-  --paper: #f6f4ed;
+  --ink: #08111f;
+  --muted: #8fa2bc;
+  --line: rgba(255, 255, 255, 0.12);
+  --paper: #08111f;
   --white: #ffffff;
-  --green: #245c47;
-  --lime: #c8ef4a;
-  --orange: #ef7b45;
-  --blue: #2f64d6;
-  --shadow: 0 18px 60px rgba(22, 24, 24, 0.12);
+  --green: #67e8f9;
+  --lime: #67e8f9;
+  --orange: #f59e5c;
+  --blue: #3b82f6;
+  --surface: #0f1d31;
+  --surface-2: #13243b;
+  --soft: #eaf2ff;
+  --shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
 }
 
 * {
@@ -21,8 +24,10 @@ html {
 
 body {
   margin: 0;
-  background: var(--paper);
-  color: var(--ink);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(59, 130, 246, 0.22), transparent 34%),
+    linear-gradient(180deg, #07101e 0%, #0b1423 44%, #08111f 100%);
+  color: var(--soft);
   font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -42,8 +47,8 @@ a {
   justify-content: space-between;
   gap: 20px;
   padding: 16px clamp(18px, 4vw, 56px);
-  background: rgba(246, 244, 237, 0.9);
-  border-bottom: 1px solid rgba(22, 24, 24, 0.08);
+  background: rgba(8, 17, 31, 0.88);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(16px);
 }
 
@@ -66,14 +71,14 @@ a {
   height: 36px;
   place-items: center;
   border-radius: 8px;
-  background: var(--ink);
-  color: var(--lime);
+  background: linear-gradient(135deg, var(--blue), var(--lime));
+  color: #06101c;
   font-size: 13px;
 }
 
 .desktop-nav {
   gap: 22px;
-  color: var(--muted);
+  color: #b9c6d8;
   font-size: 15px;
   font-weight: 700;
 }
@@ -93,6 +98,7 @@ a {
 .header-cta {
   padding: 0 16px;
   background: var(--lime);
+  color: #06101c;
 }
 
 .button {
@@ -101,13 +107,14 @@ a {
 }
 
 .button.primary {
-  background: var(--ink);
+  background: linear-gradient(135deg, var(--blue), #1d4ed8);
   color: var(--white);
 }
 
 .button.secondary {
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--line);
+  color: var(--soft);
 }
 
 .button.full {
@@ -157,7 +164,7 @@ h3 {
 
 .hero-subtitle {
   max-width: 640px;
-  color: #3f4843;
+  color: #b9c6d8;
   font-size: 19px;
   line-height: 1.7;
 }
@@ -174,9 +181,9 @@ h3 {
 .seller-card,
 .detail-card,
 .product-card {
-  border: 1px solid rgba(22, 24, 24, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  background: var(--white);
+  background: rgba(15, 29, 49, 0.92);
   box-shadow: var(--shadow);
 }
 
@@ -210,7 +217,8 @@ h3 {
   height: 38px;
   place-items: center;
   border-radius: 8px;
-  background: var(--lime);
+  background: linear-gradient(135deg, var(--lime), #8b5cf6);
+  color: #06101c;
   font-weight: 900;
 }
 
@@ -227,7 +235,7 @@ h3 {
   display: grid;
   grid-template-columns: minmax(240px, 0.7fr) 1.3fr;
   gap: 30px;
-  background: var(--ink);
+  background: #050b14;
   color: var(--white);
 }
 
@@ -249,6 +257,7 @@ h3 {
   padding: 22px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .value-grid p,
@@ -303,8 +312,9 @@ select {
   padding: 0 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--white);
+  background: #0a1728;
   color: var(--ink);
+  color: var(--soft);
   font: inherit;
 }
 
@@ -329,15 +339,15 @@ select {
   padding: 0 12px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.06);
   color: var(--muted);
   font-weight: 800;
   cursor: pointer;
 }
 
 .filter-button.active {
-  border-color: var(--ink);
-  background: var(--ink);
+  border-color: var(--lime);
+  background: rgba(103, 232, 249, 0.16);
   color: var(--white);
 }
 
@@ -359,7 +369,7 @@ select {
 
 .product-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 22px 70px rgba(22, 24, 24, 0.16);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
 }
 
 .product-visual {
@@ -368,8 +378,8 @@ select {
   place-items: center;
   margin-bottom: 16px;
   border-radius: 8px;
-  background: linear-gradient(135deg, var(--lime), #fff6c7 52%, #cfe9ff);
-  color: var(--ink);
+  background: linear-gradient(135deg, #1d4ed8, #67e8f9 52%, #8b5cf6);
+  color: #06101c;
   font-size: 28px;
   font-weight: 900;
 }
@@ -398,8 +408,8 @@ select {
   min-height: 28px;
   padding: 0 9px;
   border-radius: 8px;
-  background: #edf1ed;
-  color: #33413a;
+  background: rgba(103, 232, 249, 0.12);
+  color: #c9f7ff;
   font-size: 12px;
   font-weight: 800;
 }
@@ -444,7 +454,7 @@ select {
   grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
   gap: 24px;
   align-items: start;
-  background: #e8efe9;
+  background: linear-gradient(135deg, #0a1728, #10243d);
 }
 
 .seller-card ul {
@@ -465,7 +475,7 @@ select {
   display: grid;
   place-items: center;
   padding: 18px;
-  background: rgba(22, 24, 24, 0.56);
+  background: rgba(0, 0, 0, 0.68);
 }
 
 .modal-backdrop[hidden] {
@@ -479,7 +489,7 @@ select {
   overflow: auto;
   padding: clamp(22px, 4vw, 34px);
   border-radius: 8px;
-  background: var(--white);
+  background: var(--surface);
   box-shadow: 0 24px 90px rgba(0, 0, 0, 0.28);
 }
 
@@ -493,8 +503,8 @@ select {
   place-items: center;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--white);
-  color: var(--ink);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--soft);
   font-size: 26px;
   line-height: 1;
   cursor: pointer;
@@ -594,10 +604,10 @@ select {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     overflow: hidden;
-    border: 1px solid rgba(22, 24, 24, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.94);
-    box-shadow: 0 10px 34px rgba(22, 24, 24, 0.18);
+    background: rgba(8, 17, 31, 0.94);
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.34);
     backdrop-filter: blur(14px);
   }
 
