@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>바바스킨 | 남자를 위한 스킨케어 & 향수 큐레이션</title>
+    <meta
+      name="description"
+      content="피부관리 처음인 남자를 위한 스킨케어와 향수 큐레이션 플랫폼 MVP"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="바바스킨 홈">
+        <span class="brand-mark">BA</span>
+        <span>바바스킨</span>
+      </a>
+      <nav class="desktop-nav" aria-label="주요 메뉴">
+        <a href="#quiz">30초 진단</a>
+        <a href="#products">상품</a>
+        <a href="#seller">입점문의</a>
+      </nav>
+      <a class="header-cta" href="#seller">베타 입점</a>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">남성 스킨케어 & 향수 큐레이션</p>
+          <h1>피부관리 처음인 남자도, 덜 민망하게 고르는 곳.</h1>
+          <p class="hero-subtitle">
+            복잡한 성분표 대신 “누구에게 필요한지”, “언제 쓰는지”, “얼마나 귀찮지 않은지”로
+            제품을 보여줍니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#quiz">내 피부 30초 진단</a>
+            <a class="button secondary" href="#sample-detail">상세페이지 샘플 보기</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="바바스킨 추천 카드">
+          <div class="panel-top">
+            <span>오늘의 생존 루틴</span>
+            <strong>난이도 하</strong>
+          </div>
+          <div class="routine-card">
+            <span>1</span>
+            <div>
+              <b>세수</b>
+              <p>일단 기름과 먼지부터 정리</p>
+            </div>
+          </div>
+          <div class="routine-card">
+            <span>2</span>
+            <div>
+              <b>보습</b>
+              <p>당기기 전에 20초 바르기</p>
+            </div>
+          </div>
+          <div class="routine-card">
+            <span>3</span>
+            <div>
+              <b>선크림</b>
+              <p>세월 방어막. 귀찮아도 필수</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section strip">
+        <div>
+          <p class="eyebrow">왜 필요한가</p>
+          <h2>화장품 말고, 남자 생활 언어로 바꿉니다.</h2>
+        </div>
+        <div class="value-grid">
+          <article>
+            <h3>상황으로 추천</h3>
+            <p>“지성 피부”보다 “오후에 번들거리는 얼굴”처럼 바로 이해되는 기준을 씁니다.</p>
+          </article>
+          <article>
+            <h3>사용법 단순화</h3>
+            <p>세수 후, 손바닥에, 20초. 남자가 실제로 따라 할 수 있게 줄입니다.</p>
+          </article>
+          <article>
+            <h3>브랜드용 증명</h3>
+            <p>제품을 남성 고객에게 어떻게 다르게 보여줄지 샘플 페이지로 설득합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section quiz-section" id="quiz">
+        <div class="section-heading">
+          <p class="eyebrow">30초 피부 생존 진단</p>
+          <h2>몇 가지만 고르면 입문 루틴을 추천합니다.</h2>
+        </div>
+        <div class="quiz-layout">
+          <form class="quiz-card" id="quizForm">
+            <label>
+              세수 후 얼굴이 당기나요?
+              <select name="dryness">
+                <option value="dry">많이 당김</option>
+                <option value="normal">가끔 당김</option>
+                <option value="oily">거의 안 당김</option>
+              </select>
+            </label>
+            <label>
+              오후에 얼굴 기름이 올라오나요?
+              <select name="oil">
+                <option value="oily">많이 올라옴</option>
+                <option value="normal">조금 올라옴</option>
+                <option value="dry">거의 없음</option>
+              </select>
+            </label>
+            <label>
+              로션 바를 때 제일 싫은 건?
+              <select name="barrier">
+                <option value="sticky">끈적임</option>
+                <option value="scent">강한 향</option>
+                <option value="steps">단계가 많음</option>
+              </select>
+            </label>
+            <button class="button primary full" type="submit">결과 보기</button>
+          </form>
+          <div class="result-card" id="quizResult">
+            <p class="eyebrow">진단 결과</p>
+            <h3>아직 결과가 없습니다.</h3>
+            <p>왼쪽에서 답을 고르면 당신에게 맞는 입문 루틴이 나옵니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="section-heading row">
+          <div>
+            <p class="eyebrow">큐레이션 매대</p>
+            <h2>처음 MVP는 샘플 상품 10개면 충분합니다.</h2>
+          </div>
+          <div class="filters" id="filters" aria-label="상품 필터"></div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="section detail-section" id="sample-detail">
+        <div class="section-heading">
+          <p class="eyebrow">상세페이지 샘플</p>
+          <h2>브랜드에게 보여줄 핵심 증거입니다.</h2>
+        </div>
+        <article class="detail-card">
+          <div class="detail-main">
+            <span class="tag">보습 / 입문 추천</span>
+            <h3>세수하고 얼굴 당기는 남자용. 자기 전 20초면 끝나는 가벼운 수분 크림.</h3>
+            <p>
+              “피부 장벽 강화” 같은 말은 잠깐 접어두고, 이 제품은 씻고 나서 얼굴이
+              팽팽하게 당기는 사람에게 맞춘 보습템입니다.
+            </p>
+            <a class="button primary" href="#seller">이런 상세페이지로 입점 문의</a>
+          </div>
+          <div class="spec-table" role="table" aria-label="상품 정보 비교표">
+            <div><span>추천 대상</span><b>세수 후 당김형</b></div>
+            <div><span>끈적임</span><b>낮음</b></div>
+            <div><span>향</span><b>거의 없음</b></div>
+            <div><span>사용 난이도</span><b>세수 후 바르면 끝</b></div>
+            <div><span>추천 시간</span><b>아침 / 자기 전</b></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section seller-section" id="seller">
+        <div class="seller-copy">
+          <p class="eyebrow">판매자 베타 입점</p>
+          <h2>남성 고객에게 제품이 다르게 읽히도록 바꿔드립니다.</h2>
+          <p>
+            초기 베타는 입점비 없이 진행하고, 상품 3~5개를 남성 친화형 상세페이지와 진단
+            추천 콘텐츠로 노출하는 방식으로 검증합니다.
+          </p>
+        </div>
+        <div class="seller-card">
+          <h3>베타 입점 혜택</h3>
+          <ul>
+            <li>입점비 무료</li>
+            <li>남성 친화형 상세페이지 샘플 제작</li>
+            <li>30초 진단 결과 페이지 노출</li>
+            <li>클릭/문의 반응 리포트 제공</li>
+          </ul>
+          <a class="button primary full" href="mailto:hello@barbaskin.com?subject=바바스킨 베타 입점 문의">
+            이메일로 입점 문의
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <nav class="mobile-tab" aria-label="모바일 빠른 메뉴">
+      <a href="#home">홈</a>
+      <a href="#quiz">진단</a>
+      <a href="#products">상품</a>
+      <a href="#seller">입점</a>
+    </nav>
+
+    <div class="modal-backdrop" id="productModal" hidden>
+      <article class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" aria-label="상품 상세 닫기">×</button>
+        <span class="tag" id="modalCategory"></span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalSummary"></p>
+        <div class="spec-table modal-spec" id="modalSpecs"></div>
+        <div class="modal-actions">
+          <a class="button primary" href="#seller">입점 샘플로 문의</a>
+          <button class="button secondary" type="button" id="modalCloseButton">닫기</button>
+        </div>
+      </article>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
